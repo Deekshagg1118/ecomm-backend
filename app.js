@@ -319,7 +319,7 @@ app.delete("/cart/product/delete", async (req, res) => {
         return res.status(404).json({ message: "Product Not Found in Cart" });
       }
   
-      cart.products.splice(productIndex, 1);
+      cart.products.splice(productIndex, 1); 
       cart.total = cart.products.reduce(
         (total, product) => total + product.price,
         0
